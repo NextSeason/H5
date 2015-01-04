@@ -1,0 +1,121 @@
+.slice-9 {
+    .boxes {
+        float : left;
+        width : 115px;
+        margin : 10px 0 0 4%;
+        .top {
+            height : 25px;
+            font-size : 13px;
+            line-height : 25px;
+            color : #383838;
+            background-repeat : no-repeat;
+            -webkit-background-size : 115px 25px; 
+            background-size : 115px 25px; 
+        }
+        .body {
+            border : solid 1px #43896e;
+            padding : 10px 3px 0;
+            font-size : 0;
+            .images {
+                width : 108px;
+                height : 55px;
+                background-repeat : no-repeat;
+                -webkit-background-size : 108px 55px;
+                background-size : 108px 55px;
+                &.img-1 {
+                    background-image : url( ./images/pic9-3.png );
+                }
+                &.img-2 {
+                    background-image : url( ./images/pic9-4.png );
+                }
+                &.img-3 {
+                    background-image : url( ./images/pic9-5.png );
+                }
+                &.img-4 {
+                    background-image : url( ./images/pic9-6.png );
+                }
+                &.img-5 {
+                    background-image : url( ./images/pic9-7.png );
+                }
+                &.img-6 {
+                    background-image : url( ./images/pic9-8.png );
+                }
+            }
+            progress {
+                font-size : 0;
+                height : 3px; 
+                width : 100%;
+                border : 0;
+                &::-webkit-progress-bar {
+                    background : #000;
+                }
+                &::-webkit-progress-value {
+                    background : #4aba8e;
+                }
+            }
+            .btm {
+                font-size : 10px;
+                height : 24px;
+                span {
+                    line-height : 24px;
+                }
+                span:first-child {
+                    float : right;
+                    color : #4bc293;
+                }
+                span:last-child {
+                    float : left;
+                    color : #FFF;
+                }
+            }
+        }
+        .foot {
+            font-size : 0;
+            margin-top : 10px;
+            div {
+                width : 32px;
+                height : 3px;
+                background : #4bc293;
+                float : left;
+                margin-left : 20px;
+                position : relative;
+                top : 2px;
+            }
+            p {
+                color : #4aba8e;
+                font-size : 8px;
+                float : left;
+                margin-left : 5px;
+            }
+        }
+        &.left {
+            .top {
+                background-image : url( ./images/pic9-1.png );
+            }
+        }
+        &.right {
+            .top {
+                background-image : url( ./images/pic9-2.png );
+            }
+            .body {
+                border-color : #c46534;
+            }
+            .btm {
+                span:first-child {
+                    color : #ff7833;
+                }
+            }
+            progress::-webkit-progress-value {
+                background : #ff7833;
+            }
+            .foot {
+                div {
+                    background : #ff7833;
+                }
+                p {
+                    color : #ff7833;
+                }
+            }
+        }
+    }
+}

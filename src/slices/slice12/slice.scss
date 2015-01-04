@@ -1,0 +1,26 @@
+.slice-12 {
+    h2 {
+        font-size : 18px;
+        color : #424242;
+        i {
+            color : #f2469c;
+        }
+    }
+    .container {
+        width : 208px;
+        margin : 0 auto;
+        .boxes {
+            height : 284px;
+            background-repeat : no-repeat;
+            background-size : 208px 284px;
+            margin-top : 1000px;
+            background-image : url( ./images/pic12-1.png );
+            -webkit-transition : margin .4s ease-in-out;
+            transition : margin .4s ease-in-out;
+        }
+
+        .start {
+            margin-top : 10px;
+        }
+    }
+}

@@ -1,0 +1,38 @@
+.slice-10 {
+    overflow : hidden;
+    h2 {
+        i {
+            color : #424242;
+        }
+    }
+    .container {
+        width : 221px;
+        margin : 0 auto;
+        .boxes {
+            height : 71px;
+            background-repeat : no-repeat;
+            background-size : 221px 71px;
+            margin-top : 19px;
+            position : relative;
+            -webkit-transition : left .6s ease-in-out;
+            transition : left .6s ease-in-out;
+            &.b-1 {
+                background-image : url( ./images/pic10-1.png );
+                left : -1000px;
+            }
+            &.b-2 {
+                background-image : url( ./images/pic10-2.png );
+                left : 1000px;
+            }
+            &.b-3 {
+                background-image : url( ./images/pic10-3.png );
+                left : -1000px;
+            }
+        }
+    }
+    .tip {
+        font-size : 9px;
+        color : #535353;
+        margin-top : 8px;
+    }
+}

@@ -1,0 +1,27 @@
+.slice-11 {
+    h2 {
+        color : #424242;
+    }
+    .container {
+        width : 240px;
+        margin : 0 auto;
+        .boxes {
+            height : 253px;
+            background-repeat : no-repeat;
+            background-size : 240px 253px;
+            margin-top : 19px;
+            background-image : url( ./images/pic11-1-v1.png );
+            opacity : 0;
+            -webkit-transition : opacity .4s ease-in-out;
+            transition : opacity .4s ease-in-out;
+        }
+        .star {
+            opacity : 1;
+        }
+    }
+    .tip {
+        font-size : 9px;
+        color : #535353;
+        margin-top : 15px;
+    }
+}

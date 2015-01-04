@@ -1,0 +1,31 @@
+.slice-13 {
+    h2 {
+        i {
+            color : #424242;
+        }
+    }
+    .container {
+        width : 180px;
+        margin : 18px auto 0;
+        .boxes {
+            height : 64px;
+            background-repeat : no-repeat;
+            background-size : 180px 64px;
+            margin-top : 7px;
+            &.b-1 {
+                background-image : url( ./images/pic13-1.png );
+            }
+            &.b-2 {
+                background-image : url( ./images/pic13-2.png );
+            }
+            &.b-3 {
+                background-image : url( ./images/pic13-3.png );
+            }
+        }
+    }
+    .tip {
+        font-size : 13px;
+        color : #535353;
+        margin-top : 35px;
+    }
+}

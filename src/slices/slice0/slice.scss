@@ -1,0 +1,13 @@
+.slice-0 {
+    display : none;
+    .anchors {
+        width : 206px;
+        height : 88px;
+        background : url( ./images/movie.gif ) no-repeat;
+        -webkit-background-size : 206px 88px;
+        background-size : 206px 88px;
+        position : absolute;
+        top : 10px;
+        left : 30px;
+    }
+}

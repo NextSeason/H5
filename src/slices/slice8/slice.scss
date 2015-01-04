@@ -1,0 +1,80 @@
+.slice-8 {
+    .canvas-container {
+        position : relative;
+        display : block;
+        width : 110px;
+        height : 110px;
+        margin : 47px auto 0;
+        .pao {
+            width : 35px;
+            height : 35px;
+            -webkit-background-size : 35px 35px;
+            background-size : 35px 35px;
+            background-repeat : no-repeat;
+            position : absolute;
+            font-size : 10px;
+            color : #387dc3;
+            line-height : 14px;
+            -webkit-transition : opacity .5s ease-in-out;
+            &.cyan {
+                background-image : url( ./images/pic8-3.png );
+                top : -23px;
+                left : -18px;
+            }
+            &.orange {
+                background-image : url( ./images/pic8-1.png );
+                top : -10px;
+                left : 105px;
+            }
+            &.cream {
+                background-image : url( ./images/pic8-2.png );
+                top : 85px;
+                left : 105px;
+                padding-top : 7px;
+                -webkit-box-sizing : border-box;
+                box-sizing : border-box;
+            }
+        }
+    }
+    .bottom {
+        margin-top : 18px;
+        div {
+            background-repeat : no-repeat;
+            margin : 0 auto;
+            width : 160px;
+            height : 36px;
+            margin-top : 6px;
+            p {
+                line-height : 36px;
+                height : 36px;
+                font-size : 11px;
+                color : #FFF;
+                text-align : left;
+            }
+            &.b1 {
+                background-image : url( ./images/pic8-4.png );
+                -webkit-background-size : 32px 36px;
+                background-size : 32px 36px;
+                p {
+                    padding-left : 35px;
+                }
+            }
+            &.b2 {
+                background-image : url( ./images/pic8-5.png );
+                -webkit-background-size : 56px 36px;
+                background-size : 56px 36px;
+                p {
+                    padding-left : 60px;
+                }
+            }
+            &.b3 {
+                background-image : url( ./images/pic8-6.png );
+                -webkit-background-size : 77px 36px;
+                background-size : 77px 36px;
+                p {
+                    padding-left : 80px;
+                }
+            }
+        }
+    }
+}

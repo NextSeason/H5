@@ -1,0 +1,160 @@
+.slice-15 {
+    h2 {
+        color : #424242;
+    }
+    .container {
+        width : 220px;
+        margin : 0 auto;
+        .boxes {
+            height : 268px;
+            background : url( ./images/pic15-1.png ) no-repeat center 65px;
+            background-size : 208px 203px;
+            margin-top : 20px;
+            position : relative;
+            .item {
+                position : absolute;
+                .bubble {
+                    -webkit-border-radius : 100%;
+                    border-radius : 100%;
+                    -webkit-transform-origin : center;
+                    transform-origin : center;
+                    width : 47px;
+                    height : 47px;
+                    font-size : 0;
+                    padding : 9px 0;
+                    -webkit-box-sizing : border-box;
+                    box-sizing : border-box;
+                    background : #FFF;
+                    z-index : 100;
+                    position : absolute;
+                    top : 0;
+                    left : 0;
+                    -webkit-transform : scale( 0.1 );
+                    transform : scale( 0.1 );
+                    -webkit-transition : all .4s ease-in-out;
+                    &.big {
+                        -webkit-transform : scale( 1 );
+                        transform : scale( 1 );
+                    }
+                    p {
+                        text-align : center;
+                        color : #242424;
+                        font-size : 11px;
+                        line-height : 15px;
+                        &:last-child {
+                            font-size : 9px;
+                            line-height : 14px;
+                        }
+                    }
+                    hr {
+                        color : #3b474f;
+                        border : 0;
+                        border-top : solid 1px #3b474f;
+                        height : 0;
+                        width : 27px;
+                        margin : 0 auto;
+                    }
+                }
+                .bar {
+                    width : 43px;
+                    height : 0;
+                    font-size : 0;
+                    border-top : solid 1px #FFF;
+                    position : absolute;
+                    -webkit-transform-origin : 0 0;
+                    transform-origin : 0 0;
+                    top : 24px;
+                    left : 24px;
+                    z-index : 99;
+                }
+            }
+
+            .group-1 .item {
+                .bubble {
+                    background : #4ea7e6;
+                     
+                }
+                .bar {
+                    border-top-color : #4ea7e6;
+                }
+
+                &.item-1 {
+                    left : 0;
+                    top : 10px;
+                    .bar {
+                        -webkit-transform : rotate( 76.5deg );
+                        transform : rotate( 76.5deg );
+                    }
+                }
+                &.item-2 {
+                    left : 90px;
+                    top : 0;
+                    .bar {
+                        -webkit-transform : rotate( 90deg );
+                        transform : rotate( 90deg );
+                    }
+                }
+                &.item-3 {
+                    left : 173px;
+                    top : 10px;
+                    .bar {
+                        -webkit-transform : rotate( 102deg );
+                        transform : rotate( 102deg );
+                    }
+                }
+            }
+            .group-2 .item {
+                top : 95px;
+                .bubble {
+                    background : #fef89c;
+                }
+                .bar {
+                    border-top-color : #fef89c;
+                }
+
+                &.item-1 {
+                    left : 28px;
+                    .bar {
+                        -webkit-transform : rotate( 78.5deg );
+                        transform : rotate( 78.5deg );
+                    }
+                }
+
+                &.item-2 {
+                    left : 150px;
+                    .bar {
+                        -webkit-transform : rotate( 101.5deg );
+                        transform : rotate( 101.5deg );
+                    }
+                }
+                
+            }
+            .group-3 .item {
+                top : 188px;
+                .bubble {
+                    background : #ecdefd;
+                }
+                .bar {
+                    border-top-color : #ecdefd;
+                    width : 37px;
+
+                }
+
+                &.item-1 {
+                    left : 28px;
+                    .bar {
+                        -webkit-transform : rotate( 79.5deg );
+                        transform : rotate( 79.5deg );
+                    }
+                }
+                &.item-2 {
+                    left : 150px;
+                    .bar {
+                        -webkit-transform : rotate( 103.5deg );
+                        transform : rotate( 103.5deg );
+                    }
+                }
+            }
+        }
+    }
+}
