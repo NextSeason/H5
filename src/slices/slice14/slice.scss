@@ -13,13 +13,13 @@
             background-size : 180px 64px;
             margin-top : 7px;
             &.b-1 {
-                background-image : url( ./images/pic13-1.png );
+                background-image : url( @@path.images/pic13-1.png );
             }
             &.b-2 {
-                background-image : url( ./images/pic13-2.png );
+                background-image : url( @@path.images/pic13-2.png );
             }
             &.b-3 {
-                background-image : url( ./images/pic13-3.png );
+                background-image : url( @@path.images/pic13-3.png );
             }
         }
     }

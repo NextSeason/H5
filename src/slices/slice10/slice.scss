@@ -17,15 +17,15 @@
             -webkit-transition : left .6s ease-in-out;
             transition : left .6s ease-in-out;
             &.b-1 {
-                background-image : url( ./images/pic10-1.png );
+                background-image : url( @@path.images/pic10-1.png );
                 left : -1000px;
             }
             &.b-2 {
-                background-image : url( ./images/pic10-2.png );
+                background-image : url( @@path.images/pic10-2.png );
                 left : 1000px;
             }
             &.b-3 {
-                background-image : url( ./images/pic10-3.png );
+                background-image : url( @@path.images/pic10-3.png );
                 left : -1000px;
             }
         }

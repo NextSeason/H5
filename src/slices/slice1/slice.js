@@ -13,7 +13,7 @@
             var len = $(ele).children().length;
             if (parseInt(len) < parseInt(max+1)) {
                 var bottom = 8 + 7*(len-1);
-                $(ele).append($('<img src="./static/images/pie_2012.png" width="39" height="30" style="bottom: '+bottom+'px" />'));
+                $(ele).append($('<img src="@@path.images/pie_2012.png" width="39" height="30" style="bottom: '+bottom+'px" />'));
                 setTimeout(function() {
                     increase1(ele, max);
                 }, 100);

@@ -1,4 +1,13 @@
 .slice-4 {
+    h2 {
+        font-size : 19px;
+        i {
+            color : #443216;
+            &:first-child {
+                font-size : 24px;
+            }
+        }
+    }
     .box {
         margin : 39px auto 0;
         width : 225px;
@@ -23,7 +32,7 @@
         }
     }
     .arrow {
-        background : url( ./images/arrow.png ) no-repeat;
+        background : url( @@path.images/arrow.png ) no-repeat;
         background-size : 12px 8px;
         float : left;
         width : 12px;
@@ -50,7 +59,7 @@
             top : 10px;
             opacity : 0;
             -webkit-transition : all .5s ease-in-out;
-            background : url( ./images/pic4.png ) no-repeat;
+            background : url( @@path.images/pic4.png ) no-repeat;
             -webkit-background-size : 212px 45px;
             background-size : 212px 45px;
             margin : 0 auto;
@@ -60,7 +69,7 @@
         width : 125px;
         height : 25px;
         margin : 30px auto;
-        background : url( './images/text-4.png' ) no-repeat;
+        background : url( @@path.images/text-4.png ) no-repeat;
         -webkit-background-size : 125px 25px;
         background-size : 125px 25px;
     }

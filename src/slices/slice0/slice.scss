@@ -3,7 +3,7 @@
     .anchors {
         width : 206px;
         height : 88px;
-        background : url( ./images/movie.gif ) no-repeat;
+        background : url( @@path.images/movie.gif ) no-repeat;
         -webkit-background-size : 206px 88px;
         background-size : 206px 88px;
         position : absolute;

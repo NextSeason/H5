@@ -3,7 +3,34 @@
 module.exports = function( grunt ) {
     grunt.initConfig( {
         pkg : grunt.file.readJSON( 'package.json' ),
+        //host : "http://192.168.2.120/H5/dist",
+        host : "http://1.nextseason.sinaapp.com",
         dist : 'dist',
+        replace : {
+            dist : {
+                options : {
+                    patterns : [ {
+                        json : {
+                            "host" : "<%= host %>",
+                            "path" : {
+                                "static" : "<%= host %>/static",
+                                "images" : "<%= host %>/static/images",
+                                "js" : "<%= host %>/static",
+                                "css" : "<%= host %>/static"
+                            }
+                        }
+                    } ]
+                },
+                files : [ {
+                    expand : true, 
+                    src : [
+                        '<%= dist %>/**/*.html',
+                        '<%= dist %>/**/*.js',
+                        '<%= dist %>/**/*.css'
+                    ]
+                } ]
+            }
+        },
 
         compass : {
             dist : {
@@ -71,7 +98,7 @@ module.exports = function( grunt ) {
         watch : {
             css : {
                 files : [ 'src/**/*' ],
-                tasks : [ 'copy', 'concat', 'compass' ]
+                tasks : [ 'copy', 'concat', 'compass', 'replace' ]
             }
         },
 
@@ -115,6 +142,7 @@ module.exports = function( grunt ) {
     grunt.loadNpmTasks( 'grunt-contrib-copy' );
     grunt.loadNpmTasks( 'grunt-contrib-watch' );
     grunt.loadNpmTasks( 'grunt-contrib-concat' );
+    grunt.loadNpmTasks( 'grunt-replace' );
     //grunt.loadNpmTasks( 'grunt-tinypng' );
     //grunt.loadNpmTasks( 'grunt-contrib-uglify' );
     //grunt.loadNpmTasks( 'grunt-contrib-cssmin' );
@@ -123,5 +151,5 @@ module.exports = function( grunt ) {
         grunt.file.delete( './dist', { force : true } );
     } );
 
-    grunt.registerTask( 'default', [ 'remove', 'copy', 'concat', 'compass' ] );
+    grunt.registerTask( 'default', [ 'remove', 'copy', 'concat', 'compass', 'replace' ] );
 };

@@ -7,7 +7,7 @@
         margin : 0 auto;
         .boxes {
             height : 268px;
-            background : url( ./images/pic15-1.png ) no-repeat center 65px;
+            background : url( @@path.images/pic15-1.png ) no-repeat center 65px;
             background-size : 208px 203px;
             margin-top : 20px;
             position : relative;

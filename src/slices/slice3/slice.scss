@@ -18,17 +18,17 @@
             opacity : 0;
             -webkit-transition : opacity .5s ease-in-out;
             &.cyan {
-                background-image : url( ./images/pao-cyan.png );
+                background-image : url( @@path.images/pao-cyan.png );
                 top : -35px;
                 left : 65px;
             }
             &.orange {
-                background-image : url( ./images/pao-orange.png );
+                background-image : url( @@path.images/pao-orange.png );
                 top : 10px;
                 left : 155px;
             }
             &.cream {
-                background-image : url( ./images/pao-cream.png );
+                background-image : url( @@path.images/pao-cream.png );
                 top : 136px;
                 left : -18px;
                 padding-top : 7px;
@@ -91,7 +91,7 @@
         width : 194px;
         height : 11px;
         margin : 30px auto;
-        background : url( './images/text.png' ) no-repeat;
+        background : url( @@path.images/text.png ) no-repeat;
         -webkit-background-size : 194px 11px;
         background-size : 194px 11px;
     }

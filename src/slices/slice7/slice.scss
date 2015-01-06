@@ -33,27 +33,27 @@
         &.male-list {
             margin-top : 24px;
             li {
-                background-image : url( ./images/pic7-1.png );
+                background-image : url( @@path.images/pic7-1.png );
             }
         }
 
         &.female-list {
             margin-top : 10px;
             li {
-                background-image : url( ./images/pic7-2.png );
+                background-image : url( @@path.images/pic7-2.png );
             }
         }
         li.male {
             width : 20px;
             height : 27px;
-            background-image : url( ./images/male.png );
+            background-image : url( @@path.images/male.png );
             -webkit-background-size : 20px 27px;
             background-size : 20px 27px;
         }
         li.female {
             width : 17px;
             height : 27px;
-            background-image : url( ./images/female.png );
+            background-image : url( @@path.images/female.png );
              -webkit-background-size : 17px 27px;
             background-size : 17px 27px;
         }
