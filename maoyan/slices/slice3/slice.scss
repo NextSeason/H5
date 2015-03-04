@@ -1,0 +1,98 @@
+.slice-3 {
+    .canvas-container {
+        position : relative;
+        display : block;
+        width : 160px;
+        height : 160px;
+        margin : 50px auto 0;
+        .pao {
+            width : 35px;
+            height : 35px;
+            -webkit-background-size : 35px 35px;
+            background-size : 35px 35px;
+            background-repeat : no-repeat;
+            position : absolute;
+            font-size : 10px;
+            color : #387dc3;
+            line-height : 14px;
+            opacity : 0;
+            -webkit-transition : opacity .5s ease-in-out;
+            &.cyan {
+                background-image : url( @@path.images/pao-cyan.png );
+                top : -35px;
+                left : 65px;
+            }
+            &.orange {
+                background-image : url( @@path.images/pao-orange.png );
+                top : 10px;
+                left : 155px;
+            }
+            &.cream {
+                background-image : url( @@path.images/pao-cream.png );
+                top : 136px;
+                left : -18px;
+                padding-top : 7px;
+                -webkit-box-sizing : border-box;
+                box-sizing : border-box;
+            }
+        }
+        .big-year {
+            color : #FFF;
+            font-size : 14px;
+            position : absolute;
+            top : 74px;
+            left : 66px;
+        }
+    }
+    h2 i {
+        color : #FC0;
+        font-size : 24px;
+    }
+    hr {
+        margin : 0 auto;
+        width : 115px;
+        position : relative;
+        top : 28px;
+        z-index : 10;
+    }
+    .year-selector {
+        width : 112px;
+        margin : 20px auto;
+        position : relative;
+        z-index : 20;
+        li {
+            float : left;
+            margin : 0 5px;
+            a {
+                color : #FFF;
+                text-decoration : none;
+                width : 20px;
+                font-size : 12px;
+            }
+            .circle {
+                font-size : 0;
+                background : #FFF;
+                margin : 3px auto;
+                width : 8px;
+                height : 8px;
+                -webkit-border-radius : 100%;
+                border-radius : 100%;
+                display : block;
+            }
+        }
+
+        li.current {
+            .circle {
+                background : #FC0;
+            }
+        }
+    }
+    .text {
+        width : 194px;
+        height : 11px;
+        margin : 30px auto;
+        background : url( @@path.images/text.png ) no-repeat;
+        -webkit-background-size : 194px 11px;
+        background-size : 194px 11px;
+    }
+}

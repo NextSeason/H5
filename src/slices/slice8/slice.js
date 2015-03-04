@@ -2,57 +2,29 @@
     var slice = new Slice( {
         data : {
             className : 'slice-8',
-            h1 : '2014这个姿势看电影',
-            h2 : [
-                '<i>22%</i>一人看电影，',
-                '<i>65%</i>成对看，',
-                '<i>13%</i>三人以上组团看'
-            ].join( '' ),
-            chart : $( '#slice8-chart-tpl' ).val()
+            h1 : '油品质量堪忧',
+            bd : $( '#slice-8-tpl' ).val(),
+            summary : [
+                '我国柴油含硫量比欧盟美国高<b>25</b>倍，',
+                '我国汽油油品长期比发达国家低<b>2-3</b>等级，每提高一个等级，排放可减少<b>10%</b>，',
+                '全国<b>50%</b>的油处于失控状态，符合标准的油仅为<b>3%</b>'
+            ].join( '' )
         },
         oncreate : function() {
-            this.el.css( 'background', '#f05565' );
+            var h = ( $( window ).height() - 30 - 26 - 50 - 230 -80 ) / 2 - 5;
+            this.el.find( '.content' ).css( 'margin-top', h );
         }
     } );
-    Manager.append( slice );
-
-    var data = [ {
-        value: 22,
-        color: "#fee165"
-    }, {
-        value: 65,
-        color: "#fce8ea"
-    }, {
-        value: 13,
-        color:"#abe0be",
-    } ];
-
-    var options = {
-        //Boolean - Whether we should show a stroke on each segment
-        segmentShowStroke : false,
-
-        //Number - The percentage of the chart that we cut out of the middle
-        percentageInnerCutout : 50, // This is 0 for Pie charts
-
-        //Number - Amount of animation steps
-        animationSteps : 80,
-
-        //String - Animation easing effect
-        animationEasing : "easeIn",
-
-        //Boolean - Whether we animate the rotation of the Doughnut
-        animateRotate : true,
-
-        //Boolean - Whether we animate scaling the Doughnut from the centre
-        animateScale : false,
-    };
 
     slice.play = function() {
-
-        var ctx = document.getElementById("chart8").getContext("2d");
-
-        var myDoughnutChart = new Chart(ctx).Doughnut(data, options);
+        var me = this;
+        setTimeout( function() {
+            $( '.slice-8 .bar' ).each( function() {
+                $( this ).css( 'height', +$( this ).attr( 'data-value' ) )
+            } );
+        }, 500 );
+        setTimeout( function() { me.el.find( '.summary' ).css( 'bottom', '50px' ).css( 'opacity', 1 ); }, 200 );
     };
 
-
+    Manager.append( slice );
 } )();

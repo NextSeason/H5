@@ -1,40 +1,30 @@
-(function() {
+( function() {
     var slice = new Slice( {
         data : {
             className : 'slice-9',
-            h1 : '2014这个姿势看电影',
-            h2 : [
-                '女看肉，男看斗<br />',
-                '女爱小呆萌，男爱小怪兽'
-            ].join( '' ),
-            chart : $( '#slice9-chart-tpl' ).val()
+            h1 : '空气中是钱的味道',
+            bd : $( '#slice-9-tpl' ).val(),
+            summary : [
+                '生产<b>1</b>吨钢省去环保成本可以节省<b>100</b>元、',
+                '1吨煤省去环保成本可以节省<b>156</b>元、<b>1</b>辆车不装环保设施可以节省<b>20,000</b>元、',
+                '油品少升级一次可以节省<b>500</b>亿元。雾霾天中，我们闻到空气中的其实是钱的味道。'
+            ].join( '' )
         },
         oncreate : function() {
-            this.el.css( 'background', '#383838' );
+            var h = ( $( window ).height() - 30 - 26 - 50 - 220 - 100 ) / 2 - 5;
+            this.el.find( '.content' ).css( 'margin-top', h );
         }
     } );
-    Manager.append( slice );
 
-    function _increase( ele ) {
-        var l = +ele.attr( 'value' ),
-            max = +ele.attr( 'data-value' );
-        if (l < max) {
-            console.log( ele, l );
-            l += 2;
-            if( l > max ) l = max;
-
-            ele.parent().find( '.percent' ).html( l + '%' );
-            ele.attr( 'value', l );
-            setTimeout(function() {
-                _increase( ele );
-            }, 30 );
-        }
-    };
     slice.play = function() {
+        var me = this;
+
         setTimeout( function() {
-            slice.el.find( 'progress' ).forEach( function( elem ) {
-                _increase( $( elem ) );
-            } );
-        }, 600 );
-    }
-} )(); 
+            me.el.find( 'ul li div' ).css( 'opacity', 1 );
+        }, 200 );
+        setTimeout( function() { 
+            me.el.find( '.summary' ).css( 'bottom', '50px' ).css( 'opacity', 1 );
+        }, 200 );
+    };
+    Manager.append( slice );
+} )();

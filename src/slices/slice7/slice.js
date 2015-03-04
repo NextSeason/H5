@@ -2,58 +2,49 @@
     var slice = new Slice( {
         data : {
             className : 'slice-7',
-            h1 : '2014这个姿势看电影',
-            h2 : [
-                '男生看得多，2014平均看<i>6次</i><br />',
-                '女性观众多，占观影用户<i>53%</i>'
-            ].join( '' ),
-            chart : $( '#slice7-chart-tpl' ).val()
+            h1 : '柴油车的危害',
+            bd : $( '#slice-7-tpl' ).val(),
+            summary : [
+                '至少<b>90%</b>的柴油货车都没有基本的排放过滤设备。',
+                '这类车排放的一次性颗粒物排放占总量的<b>99%</b>。',
+                '且其排放尾气的致基因突变性是普通汽车尾气污染物的<b>100,000</b>倍。'
+            ].join( '' )
         },
         oncreate : function() {
-            this.el.css( 'background', '#cd8bd1' );
+            var h = ( $( window ).height() - 30 - 26 - 50 - 179 -80 ) / 2 - 5;
+            this.el.find( '.content' ).css( 'margin-top', h );
         }
     } );
-    Manager.append( slice );
-
-    var data1 = [ {
-        value : 47,
-        color : '#bae4ff'
-    }, {
-        value : 53,
-        color : 'rgba( 0, 0, 0, 0 )'
-    } ];
-
-    var data2 = [ {
-        value : 47,
-        color : 'rgba( 0, 0, 0, 0 )'
-    }, {
-        value : 53,
-        color : '#ffd3f0'
-    } ];
-
-    var options = {
-        segmentShowStroke : false,
-        animationSteps : 50,
-        animationEasing : "easeOut",
-        animateRotate : true,
-        animateScale : true,
-    };
 
     slice.play = function() {
         var me = this;
 
-        var ctx1 = document.getElementById( 'chart7-1' ).getContext( '2d' );
-        var chart1 = new Chart( ctx1 ).Pie( data1, options );
-
-        var ctx2 = document.getElementById( 'chart7-2' ).getContext( '2d' );
-        var chart2 = new Chart( ctx2 ).Pie( data2, options );
-
         setTimeout( function() {
-            var container = me.el.find( '.canvas-container' );
+            var el = $( '#times' );
+            me.el.find( '.diesel' ).css( '-webkit-transform', 'scale(1)' );    
 
-            container.eq( 0 ).css( 'left', '5px' );
-            container.eq( 1 ).css( 'left', '-5px' );
-            container.find( 'p' ).css( 'opacity', 1 );
-        }, 1200 );
+            ( function() {
+                var i = parseInt( el.html().replace( ',', '' ) ),
+                    args = arguments,
+                    j = ( i + 2468 ) + '';
+
+                if( j.length > 3 ) j = j.replace( /(\d{3})$/, ',$1' );
+                el.html( j + ' 倍' );
+                if( i >= 100000 ) {
+                    el.html( '100,000 倍' );
+                    return;
+                }
+                setTimeout( function() {
+                    args.callee();
+                }, 20 );
+            } )()
+        }, 500 );
+
+        setTimeout( function() {  
+            me.el.find( '.summary' ).css( 'opacity', 1 );
+        }, 200 );
     };
+
+    Manager.append( slice );
+
 } )();

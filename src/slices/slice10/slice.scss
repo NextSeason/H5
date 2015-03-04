@@ -1,38 +1,15 @@
 .slice-10 {
-    overflow : hidden;
-    h2 {
-        i {
-            color : #424242;
-        }
-    }
-    .container {
-        width : 221px;
-        margin : 0 auto;
-        .boxes {
-            height : 71px;
-            background-repeat : no-repeat;
-            background-size : 221px 71px;
-            margin-top : 19px;
-            position : relative;
-            -webkit-transition : left .6s ease-in-out;
-            transition : left .6s ease-in-out;
-            &.b-1 {
-                background-image : url( @@path.images/pic10-1.png );
-                left : -1000px;
-            }
-            &.b-2 {
-                background-image : url( @@path.images/pic10-2.png );
-                left : 1000px;
-            }
-            &.b-3 {
-                background-image : url( @@path.images/pic10-3.png );
-                left : -1000px;
+    .bd {
+        .content {
+            color : #ff3e3e;
+            font-size : 23px;
+            text-align : center;
+            .tel {
+                font-size : 90px;
+                font-weight : bold;
+                font-family : arial;
+                margin-top : 10px;
             }
         }
-    }
-    .tip {
-        font-size : 9px;
-        color : #535353;
-        margin-top : 8px;
     }
 }

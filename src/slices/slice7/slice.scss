@@ -1,93 +1,63 @@
 .slice-7 {
-    h2 {
-        color : #424242;
-        font-size : 19px;
-        i {
-            color : #FFF;
-        }
-    }
-
-    ul {
-        width : 170px;
-        margin : 0 auto;
-        li {
-            float : left;
-            width : 14px;
-            height : 27px;
-            display : block;
-            margin-left : 5px;
-            -webkit-background-size : 14px 17px;
-            background-size : 14px 17px;
-            background-repeat : no-repeat;
-            background-position : 0 bottom;
-            &:last-child {
-                background : none!important;
-                width : 20px!important;
-                font-size : 10px;
-                position : relative;
-                top : 10px;
-                line-height : 27px;
-            }
-        }
-
-        &.male-list {
-            margin-top : 24px;
-            li {
-                background-image : url( @@path.images/pic7-1.png );
-            }
-        }
-
-        &.female-list {
-            margin-top : 10px;
-            li {
-                background-image : url( @@path.images/pic7-2.png );
-            }
-        }
-        li.male {
-            width : 20px;
-            height : 27px;
-            background-image : url( @@path.images/male.png );
-            -webkit-background-size : 20px 27px;
-            background-size : 20px 27px;
-        }
-        li.female {
-            width : 17px;
-            height : 27px;
-            background-image : url( @@path.images/female.png );
-             -webkit-background-size : 17px 27px;
-            background-size : 17px 27px;
-        }
-
-    }
-    .tip {
-        margin-top : 10px;
-        font-size : 11px;
-    }
-    .box {
-        width : 140px;
-        height : 140px;
+    .chart {
         position : relative;
-        margin : 20px auto 0;
-        .canvas-container {
+        margin : 0 auto;
+        width : 290px; 
+        height : 130px;
+        .item {
+            width : 55px;
+            height : 27px;
             position : absolute;
-            top : 0;
-            left : 0;
-            -webkit-transition : left .4s ease-in-out;
-            transition : left .5s ease-in-out;
-            p {
-                position : absolute;
-                top : 65px;
-                left : 15px;
-                font-size : 13px;
-                opacity : 0;
-                -webkit-transition : opacity .4s ease-in-out;
-                transition : opacity .4s ease-in-out;
-            }
-            &.male {
-                p {
-                    left : 80px;
+            left : -9999px;
+            &.diesel {
+                width : 240px;
+                height : 136px;
+                top : 0;
+                left : 0;
+                background : url( @@path.images/slice7-1.png ) no-repeat;
+                background-size : contain;
+                -webkit-transition : all .9s ease-in-out; 
+                -webkit-transform : scale( .2 );
+                -webkit-transform-origin : 50% 90%; 
+                #times {
+                    position : absolute;
+                    top : 81px;
+                    left : 35px;
+                    font-family : arial;
+                    font-weight : bold;
+                    color : #FFF;
+                    font-size : 20px;
                 }
             }
+            &.gasoline {
+                left : 240px;
+                top : 102px;
+                background : url( @@path.images/slice7-2.png ) no-repeat;
+                background-size : contain;
+            }
         }
+    }
+    .legend {
+        width : 220px;
+        margin : 35px auto 0;
+        span {
+            float : left;
+            display : block;
+            margin-left : 13px;
+            &.color {
+                width : 13px;
+                height : 13px;
+                background : #ee462b;
+                margin-left : 25px;
+                &.c2 {
+                    background : #83e579;
+                }
+            }
+            &:first-child {
+                margin-left : 0;
+            }
+
+        }
+
     }
 }

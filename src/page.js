@@ -54,6 +54,7 @@ Slice.prototype = {
  
     _render : function( str, data ) { 
         var me = this;
+        data = data || {};
         return str.replace( /{#([\w.]+)}/g, function( m, n ) { 
             val = me._extract( n, data );
             return typeof val === 'undefined' ? '' : val;
@@ -160,6 +161,8 @@ var Manager = ( function() {
     } );
 
     $( document ).on( 'touchstart', function( e ) {
-        e.preventDefault();
+        $( document ).on( 'touchmove', function( e ) {
+            e.preventDefault();
+        } );
     } );
 } )();

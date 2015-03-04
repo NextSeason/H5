@@ -1,4 +1,12 @@
-.slice-1 {
-    display : none;
-    overflow : hidden;
+.slice-cover {
+    padding-top : 15px;
+    background : url( @@path.images/cover-bg.png ) no-repeat #282828;
+    background-size : cover;
+    .logo {
+        width : 96px;
+        height : 29px;
+        margin : 0 auto;
+        background : url( @@path.images/logo.png ) no-repeat;
+        background-size : contain;
+    }
 }

@@ -1,0 +1,93 @@
+.slice-7 {
+    h2 {
+        color : #424242;
+        font-size : 19px;
+        i {
+            color : #FFF;
+        }
+    }
+
+    ul {
+        width : 170px;
+        margin : 0 auto;
+        li {
+            float : left;
+            width : 14px;
+            height : 27px;
+            display : block;
+            margin-left : 5px;
+            -webkit-background-size : 14px 17px;
+            background-size : 14px 17px;
+            background-repeat : no-repeat;
+            background-position : 0 bottom;
+            &:last-child {
+                background : none!important;
+                width : 20px!important;
+                font-size : 10px;
+                position : relative;
+                top : 10px;
+                line-height : 27px;
+            }
+        }
+
+        &.male-list {
+            margin-top : 24px;
+            li {
+                background-image : url( @@path.images/pic7-1.png );
+            }
+        }
+
+        &.female-list {
+            margin-top : 10px;
+            li {
+                background-image : url( @@path.images/pic7-2.png );
+            }
+        }
+        li.male {
+            width : 20px;
+            height : 27px;
+            background-image : url( @@path.images/male.png );
+            -webkit-background-size : 20px 27px;
+            background-size : 20px 27px;
+        }
+        li.female {
+            width : 17px;
+            height : 27px;
+            background-image : url( @@path.images/female.png );
+             -webkit-background-size : 17px 27px;
+            background-size : 17px 27px;
+        }
+
+    }
+    .tip {
+        margin-top : 10px;
+        font-size : 11px;
+    }
+    .box {
+        width : 140px;
+        height : 140px;
+        position : relative;
+        margin : 20px auto 0;
+        .canvas-container {
+            position : absolute;
+            top : 0;
+            left : 0;
+            -webkit-transition : left .4s ease-in-out;
+            transition : left .5s ease-in-out;
+            p {
+                position : absolute;
+                top : 65px;
+                left : 15px;
+                font-size : 13px;
+                opacity : 0;
+                -webkit-transition : opacity .4s ease-in-out;
+                transition : opacity .4s ease-in-out;
+            }
+            &.male {
+                p {
+                    left : 80px;
+                }
+            }
+        }
+    }
+}

@@ -1,30 +1,62 @@
 .slice-2 {
-    display : none;
-    .list ul li {
-        font-size : 0;
+    .chart {
+        position : relative;
+        margin : 0 auto;
+        width : 297.5px;
+        height : 218px;
+        > div {
+            position : absolute;
+            opacity : 0;
+            color : #FFF;
+            -webkit-transition : opacity .9s ease-in-out;
+            transition : opacity .9s ease-in-out;
+            &.c1 {
+                width : 297.5px;
+                height : 218px;
+                background : url( @@path.images/slice2-1.png );
+                background-size : contain;
+                opacity : 1;
+            }
+            &.c2 {
+                width : 297.5px;
+                height : 218px;
+                background : url( @@path.images/slice2-2.png );
+                background-size : contain;
+            }
+            &.p1 {
+                font-size : 20px;
+                left : 46px;
+                top : 125px;
+            }
+            &.p2 {
+                font-size : 25px;
+                left : 165px;
+                top :120px;
+            }
+        }
     }
-    progress {
-        width : 100%;
-        height : 2px;
-        margin : 0;
-        font-size : 0;
-        border-radius : 0;
-        padding : 0;
-        border : 0;
-        &::-webkit-progress-value {
-            background : #3892ec;
+    .legend {
+        width : 220px;
+        margin : 5px auto 0;
+        span {
+            float : left;
+            display : block;
+            margin-left : 13px;
+            &.color {
+                width : 13px;
+                height : 13px;
+                background : #33acf2;
+                margin-left : 25px;
+                &.c2 {
+                    background : #686868;
+                }
+            }
+            &:first-child {
+                margin-left : 0;
+            }
+
         }
-        &::-webkit-progress-bar {
-            background : #303030;
-        }
+
     }
 
-    .tip {
-        position : absolute;
-        bottom : 10px;
-        width : 100%;
-        text-align : center;
-        color : #E7E7E7;
-        font-size : 9px;
-    }
 }

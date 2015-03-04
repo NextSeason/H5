@@ -2,36 +2,34 @@
     var slice = new Slice( {
         data : {
             className : 'slice-6',
-            h1 : '2014他们大出风头',
-            h2 : [
-                '基友赛高 <i>鲜肉</i>争宠<br />',
-                '遥想2014，女神都嫁了'
-            ].join( '' ),
-            chart : $( '#slice6-chart-tpl' ).val()
+            h1 : '机动车的污染',
+            bd : $( '#slice-6-tpl' ).val(),
+            summary : [
+                '2010年一年汽车的增长量<b>80</b>万，',
+                '北京PM2.5来源最大的是机动车。北京<b>34%</b>的人开车，',
+                '六环以内每小时PM2.5的排放量达到<b>1</b>吨。'
+            ].join( '' )
         },
         oncreate : function() {
-            this.el.css( 'background', '#6fd0d9' );
+            var h = ( $( window ).height() - 30 - 26 - 50 - 255 -80 ) / 2 - 5;
+            this.el.find( '.content' ).css( 'margin-top', h );
         }
     } );
-    Manager.append( slice );
 
     slice.play = function() {
+        var me = this;
 
         setTimeout( function() {
-            $( '.box-container .b-1' ).css( 'margin-top', 0 );
+            me.el.find( '.car' ).css( 'left', 0 );
         }, 500 );
+        setTimeout( function() {
+            me.el.find( '.water, .text' ).css( 'opacity', 1 );
+        }, 600 );
 
-        $( '.nav li' ).on( 'tap', function( e ) {
-            var i = $( this ).attr( 'data-index' );
-            e.preventDefault();
-
-            if( $( this ).hasClass( 'current' ) ) {
-                return false;
-            }
-            $( '.nav li' ).removeClass( 'current' );
-            $( this ).addClass( 'current' );
-
-            $( '.box-container .b-1' ).css( 'margin-top', -( i * 322 )  );
-        } );
+        setTimeout( function() {  
+            me.el.find( '.summary' ).css( 'opacity', 1 );
+        }, 200 );
     };
+
+    Manager.append( slice );
 } )();

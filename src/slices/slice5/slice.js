@@ -1,45 +1,31 @@
 ( function() {
-     var slice = new Slice( {
+    var slice = new Slice( {
         data : {
             className : 'slice-5',
-            h1 : '2014大不同',
-            h2 : [
-                '中国观众<i>影商</i>更高<br />',
-                '唯有<i>干货</i>才能hold住全场'
-            ].join( '' ),
-            chart : $( '#slice5-chart-tpl' ).val()
+            h1 : '散煤的危害',
+            bd : $( '#slice-5-tpl' ).val(),
+            summary : [
+                '北京冬季单位浓度PM2.5中致癌物是夏季的<b>25</b>倍。',
+                '散烧煤如果洗干净，我们的排放将降减少<b>50%</b>'
+            ].join( '' )
         },
         oncreate : function() {
-            this.el.css( 'background', '#7e5eca' );
+            var h = ( $( window ).height() - 30 - 26 - 50 - 258 -60 ) / 2 - 5;
+            this.el.find( '.content' ).css( 'margin-top', h );
         }
     } );
-    Manager.append( slice );
-
-    var start = 0;
-
-    Damaku = {
-        move : function() {
-            this.intval = setInterval( function() {
-                start = start - 5;
-                $( '.danmaku' ).css( 'background-position-x', start );
-            }, 50 );
-        },
-        stop : function() {
-            this.intval && this.clearInterval( this.intval );
-        }
-    };
 
     slice.play = function() {
-
+        var me = this;
         setTimeout( function() {
-            $( '.c-1' ).css( 'top', 0 );
-            setTimeout( function() {
-                $( '.c-2' ).css( 'top', 0 );
-                setTimeout( function() {
-                    $( '.c-3' ).css( 'top', 0 );
-                    Damaku.move();
-                }, 500 );
-            }, 500 );
-        }, 100 );
+            me.el.find( '.chart' ).css( 'top', 0 );
+            me.el.find( '.legend' ).css( 'top', 0 );
+        }, 500 );
+
+        setTimeout( function() {  
+            me.el.find( '.summary' ).css( 'opacity', 1 );
+        }, 200 );
     };
+
+    Manager.append( slice );
 } )();

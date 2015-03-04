@@ -1,0 +1,76 @@
+.slice-4 {
+    h2 {
+        font-size : 19px;
+        i {
+            color : #443216;
+            &:first-child {
+                font-size : 24px;
+            }
+        }
+    }
+    .box {
+        margin : 39px auto 0;
+        width : 225px;
+    }
+    .canvas-container {
+        height : 80px;
+        float : left;
+        position : relative;
+        span:first-child {
+            position : absolute;
+            top : 26px;
+            left : 22px;
+            color : #FFF;
+            font-size : 9px;
+        }
+        span:last-child {
+            position : absolute;
+            top : 70px;
+            left : 22px;
+            color : #373737;
+            font-size : 8px;
+        }
+    }
+    .arrow {
+        background : url( @@path.images/arrow.png ) no-repeat;
+        background-size : 12px 8px;
+        float : left;
+        width : 12px;
+        height : 8px;
+        margin : 25px 5px;
+    }
+    .tip {
+        color : #FFF;
+        margin : 0 auto;
+        line-height : 28px;
+        height : 28px;
+        font-size : 10px;
+    }
+    .pic-container {
+        height : 80px;
+        padding-top : 32px;
+        -webkit-box-sizing : border-box;
+        box-sizing : border-box;
+        .pic {
+            width : 212px;
+            height : 45px;
+            position : relative;
+            left : 10px;
+            top : 10px;
+            opacity : 0;
+            -webkit-transition : all .5s ease-in-out;
+            background : url( @@path.images/pic4.png ) no-repeat;
+            -webkit-background-size : 212px 45px;
+            background-size : 212px 45px;
+            margin : 0 auto;
+        }
+    }
+    .text {
+        width : 125px;
+        height : 25px;
+        margin : 30px auto;
+        background : url( @@path.images/text-4.png ) no-repeat;
+        -webkit-background-size : 125px 25px;
+        background-size : 125px 25px;
+    }
+}

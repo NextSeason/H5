@@ -2,24 +2,28 @@
     var slice = new Slice( {
         data : {
             className : 'slice-10',
-            h1 : '2014这个姿势看电影',
-            h2 : [
-                '70后爱家，80后回忆<br />',
-                '<i>90后</i>就是不一样'
-            ].join( '' ),
-            chart : $( '#slice10-chart-tpl' ).val()
+            h1 : '我们怎么办',
+            bd : $( '#slice-10-tpl' ).val(),
+            summary : [
+                '发生过“大烟雾事件”的伦敦在治理污染的前10年，污染物下降了<b>80%</b> 。',
+                '发生过严重“光化学烟雾”事件的洛杉矶，车辆比上世纪七十年代增加了3倍，但排放低了<b>75%</b>。',
+                ,'污染可以解决，每人都可监督——全国统一环保举报热线：<b>12369</b>'
+            ].join( '' )
         },
         oncreate : function() {
-            this.el.css( 'background', '#4bc293' );
-       }
+            var h = ( $( window ).height() - 30 - 26 - 50 - 123 - 120 ) / 2 - 5;
+            this.el.find( '.content' ).css( 'margin-top', h );
+        }
     } );
 
-    Manager.append( slice );
-
     slice.play = function() {
-        setTimeout( function() {
-            $( '.boxes' ).css( 'left', 0 );
-        }, 500 );
+        var me = this;
+        setTimeout( function() { 
+            me.el.find( '.summary' ).css( 'bottom', '50px' ).css( 'opacity', 1 ); 
+        }, 200 );
     };
 
+    slice.play();
+
+    Manager.append( slice );
 } )();

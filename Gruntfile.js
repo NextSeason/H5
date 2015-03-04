@@ -4,7 +4,8 @@ module.exports = function( grunt ) {
     grunt.initConfig( {
         pkg : grunt.file.readJSON( 'package.json' ),
         //host : "http://192.168.2.120/H5/dist",
-        host : "http://1.nextseason.sinaapp.com",
+        //host : "http://1.nextseason.sinaapp.com",
+        host : "http://m.baidu.com/static/searchbox/activity/2015fog",
         dist : 'dist',
         replace : {
             dist : {
@@ -69,7 +70,6 @@ module.exports = function( grunt ) {
             scripts : {
                 src : [ 
                     'src/page.js',
-                    'src/slices/slice0/*.js',
                     'src/slices/slice1/*.js',
                     'src/slices/slice2/*.js',
                     'src/slices/slice3/*.js',
@@ -81,11 +81,6 @@ module.exports = function( grunt ) {
                     'src/slices/slice9/*.js',
                     'src/slices/slice10/*.js',
                     'src/slices/slice11/*.js',
-                    'src/slices/slice12/*.js',
-                    'src/slices/slice13/*.js',
-                    //'src/slices/slice14/*.js',
-                    'src/slices/slice15/*.js',
-                    'src/slices/slice16/*.js' 
                 ],
                 dest : '<%= dist %>/static/page.js'
             },

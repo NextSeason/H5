@@ -1,0 +1,95 @@
+.slice-6 {
+    overflow : hidden;
+    h2 {
+        color : #424242;
+        i {
+            color : #fef097;
+        }
+    }
+    .nav {
+        position : absolute;
+        right : -90px;
+        top : 185px;
+        li {
+            width : 160px;
+            height : 48px;
+            background : #ded5f4; 
+            -webkit-transform : rotate( 45deg );
+            transform : rotate( 45deg );
+            margin-top : 25px;
+            position : relative;
+            left : 0;
+            top : 0;
+            -webkit-transition : all .5s ease-in-out;
+            transition : all .5s ease-in-out;
+            .top {
+                background : #ded5f4; 
+                width : 34px;
+                height : 34px;
+                position : absolute;
+                top : 7px;
+                left : -18px;
+                -webkit-transform : rotate( 45deg );
+                transform : rotate( 45deg );
+                z-index : 10;
+                -webkit-transition : all .5s ease-in-out;
+                transition : all .5s ease-in-out;
+            }
+            p {
+                position : absolute;
+                left : -10px;
+                z-index : 100;
+                font-size : 12px;
+                font-weight : bold;
+                padding : 10px;
+                -webkit-box-sizing : border-box;
+                box-sizing : border-box;
+                span {
+                    display : block;
+                    margin-top : 2px;
+                    text-align : left;
+                }
+            }
+            &.current {
+                background : #f5eec0;
+                left : -25px;
+                top : -25px;
+                .top {
+                    background : #f5eec0;
+                }
+            }
+        }
+    }
+    .box-container {
+        width : 200px;
+        height : 322px;
+        overflow : hidden;
+        margin-top : 5px;
+        .boxes {
+            background-repeat : no-repeat;
+            width : 200;
+            height : 322px;
+            -webkit-transition : all .6s ease-in-out;
+            &.b-1 {
+                background-image : url( @@path.images/pic6-1.png );
+                background-size : 163px 264px;
+                background-position : 10px 25px;
+            }
+            &.b-2 {
+                background-image : url( @@path.images/pic6-2.png );
+                background-size : 163px 292px;
+                background-position : 10px 5px;
+            }
+            &.b-3 {
+                background-image : url( @@path.images/pic6-3.png );
+                background-size : 173px 322px;
+                background-position : 10px 5px;
+            }
+            &.b-4 {
+                background-image : url( @@path.images/pic6-4.png );
+                background-size : 178px 298px;
+                background-position : 10px 10px;
+            }
+        }
+    }
+}
